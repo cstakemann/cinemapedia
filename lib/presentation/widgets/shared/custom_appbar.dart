@@ -30,7 +30,7 @@ class CustomAppBar extends ConsumerWidget {
                   onPressed: () {
                     // final movieRepository = ref.read(movieRepositoryProvider);
                     final searchQuery = ref.read(searchQueryProvider);
-                    final searchedMovies = ref.read(searchedMoviesProvider);
+                    // final searchedMovies = ref.read(searchedMoviesProvider);
 
                     showSearch<Movie?>(
                         query: searchQuery,
@@ -43,7 +43,7 @@ class CustomAppBar extends ConsumerWidget {
                         )).then((movie) {
                       if (movie == null) return;
 
-                      context.push('/movie/${movie.id}');
+                      context.push('/home/0/movie/${movie.id}');
                     });
                   },
                 )
